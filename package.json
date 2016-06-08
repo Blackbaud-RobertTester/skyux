@@ -97,5 +97,6 @@
   },
   "scripts": {
     "test": "grunt test"
-  }
+  },
+  "main": "index.js"
 }
