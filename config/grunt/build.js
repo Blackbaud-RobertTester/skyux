@@ -79,6 +79,14 @@ module.exports = function (grunt, env, utils) {
                     cwd: 'scss',
                     dest: '<%= skyux.paths.dist %>css/images'
                 }]
+            },
+            moment: {
+                files: [{
+                    cwd: 'node_modules/moment/locale',
+                    src: '*',
+                    dest: '<%= skyux.paths.dist %>js/locale',
+                    expand: true
+                }]
             }
         },
         cssmin: {
@@ -280,7 +288,8 @@ module.exports = function (grunt, env, utils) {
             'buildpaletteservice': true,
             'html2js': true,
             'concat_sourcemap': true,
-            'uglify': false
+            'uglify': false,
+            'copy:moment': false
         });
     });
 
